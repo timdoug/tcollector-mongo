@@ -1,6 +1,10 @@
-A tcollector collector for mongodb
-==================================
+mongo.py -- a tcollector script for OpenTSDB
+============================================
 
+What is this?
+-------------
+
+It's a tcollector-compatible script for inserting MongoDB statistics into OpenTSDB.
 
 
 What's wrong with [this project](https://github.com/greenmang0/opentsdb-mongo)?
