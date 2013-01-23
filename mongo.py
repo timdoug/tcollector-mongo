@@ -35,15 +35,10 @@ METRICS = (
     'network.bytesIn',
     'network.bytesOut',
     'network.numRequests',
-    'opcounters.command',
-    'opcounters.delete',
-    'opcounters.getmore',
-    'opcounters.insert',
-    'opcounters.query',
-    'opcounters.update',
 )
 TAG_METRICS = (
     ('asserts',     ('msg', 'regular', 'user', 'warning')),
+    ('opcounters',  ('command', 'delete', 'getmore', 'insert', 'query', 'update')),
 )
 
 def main():
