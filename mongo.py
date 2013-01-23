@@ -6,7 +6,7 @@ import pymongo
 
 HOST = 'localhost'
 PORT = 27017
-METRICS = [
+METRICS = (
     'backgroundFlushing.average_ms',
     'backgroundFlushing.flushes',
     'backgroundFlushing.total_ms',
@@ -41,7 +41,7 @@ METRICS = [
     'opcounters.insert',
     'opcounters.query',
     'opcounters.update',
-]
+)
 
 def main():
     c = pymongo.Connection(host=HOST, port=PORT)
