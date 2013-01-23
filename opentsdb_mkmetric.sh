@@ -29,9 +29,5 @@ mongo.mem.mapped \
 mongo.network.bytesIn \
 mongo.network.bytesOut \
 mongo.network.numRequests \
-mongo.opcounters.command \
-mongo.opcounters.delete \
-mongo.opcounters.getmore \
-mongo.opcounters.insert \
-mongo.opcounters.query \
-mongo.opcounters.update
+mongo.opcounters \
+
