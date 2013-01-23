@@ -42,6 +42,9 @@ METRICS = (
     'opcounters.query',
     'opcounters.update',
 )
+TAG_METRICS = (
+    ('asserts',     ('msg', 'regular', 'user', 'warning')),
+)
 
 def main():
     c = pymongo.Connection(host=HOST, port=PORT)
@@ -50,8 +53,9 @@ def main():
         res = c.admin.command('serverStatus')
         ts = int(time.time())
 
-        for assert_tag in ('msg', 'regular', 'user', 'warning',):
-            print 'mongo.asserts', ts, res['asserts'][assert_tag], 'type=' + assert_tag
+        for base_metric, tags in TAG_METRICS:
+            for tag in tags:
+                print 'mongo.'+base_metric, ts, res[base_metric][tag], 'type=' + tag
         for metric in METRICS:
             cur = res
             try:
