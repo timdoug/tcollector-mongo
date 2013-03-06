@@ -1,6 +1,12 @@
 mongo.py -- a tcollector script for OpenTSDB
 ============================================
 
+Note: merged upstream
+---------------------
+
+This collector has been merged upstream [here](https://github.com/OpenTSDB/tcollector/commit/192af2ff3a4e3fcd7a547197f2ef15c7a5ef39e1). Continued development will happen in the official repo. Thanks!
+
+
 What is this?
 -------------
 
